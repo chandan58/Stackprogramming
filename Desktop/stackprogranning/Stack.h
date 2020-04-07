@@ -7,7 +7,7 @@ struct stack* new_stack(unsinged capacity)
     return stack;
 }
 
-int top(struct stack* stack)
+char top(struct stack* stack)
 {
 
     return stack->top;
@@ -18,10 +18,17 @@ int size(struct stack *pt)
     return pt->top +1;
 }
 
-void push(struct Stack* stack, int item)
+void push(struct Stack* stack, char item)
 {
     if (isFull(stack))
         return;
     stack->array[++stack->top] = item;
     printf("%d pushed to stack\n", item);
+}
+
+char pop(struct Stack* stack)
+{
+    if (isEmpty(stack))
+        return INT_MIN;
+    return stack->array[stack->top--];
 }
