@@ -3,12 +3,28 @@
 #include <stdio.h>
 #include ”stack.h”
 #def ine STACK_SIZE 10
-// S t r u c t u r e d e f i n i n g a s t a c k
+// Structure defining a stack
 struct stack
 {
 char elements[STACK_SIZE ] ;
 int top ;
 } ;
+
+void print( stack* st)
+{
+    int i;
+
+	if(top==-1)
+	{
+		printf("\nStack is empty!!");
+	}
+	else
+	{
+		printf("\nStack is...\n");
+		for(i=top;i>=0;--i)
+			printf("%d\n",stack[i]);
+}
+
 int main ( )
 {
 struct stack* st=new_stack ( ) ;
@@ -17,6 +33,6 @@ push ( ’ e ’ , i ) ;
 push ( ’ l ’ , i ) ;
 push ( ’ l ’ , i ) ;
 push ( ’ o ’ , i ) ;
-print( st ) ;
-reverse_print ( s t ) ;
+print(st) ;
+reverse_print(st) ;
 }
