@@ -7,7 +7,7 @@ struct stack* new_stack(unsinged capacity)
     return stack;
 }
 
-char top(struct stack* stack)
+int top(struct stack* stack)
 {
 
     return stack->top;
