@@ -9,3 +9,8 @@ int top(struct stack* stack)
 
     return stack->top;
 }
+
+int size(struct stack *pt)
+{
+    return pt->top +1;
+}
