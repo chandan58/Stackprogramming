@@ -9,8 +9,22 @@ struct stack
 char elements[STACK_SIZE ] ;
 int top ;
 } ;
+void reverse_print(stack)
+{
+    int n = strlen(str);
+    Stack* stack = createStack(n);
 
-void print( stack* st)
+    // Push all characters of string to stack
+    int i;
+    for (i = 0; i < n; i++)
+        push(stack, str[i]);
+
+    // Pop all characters of string and
+    for (i = 0; i < n; i++)
+        str[i] = pop(stack);
+}
+}
+void print( stack* stack)
 {
     int i;
 
@@ -33,6 +47,6 @@ push ( ’ e ’ , i ) ;
 push ( ’ l ’ , i ) ;
 push ( ’ l ’ , i ) ;
 push ( ’ o ’ , i ) ;
-print(st) ;
-reverse_print(st) ;
+print(stack) ;
+reverse_print(stack) ;
 }
